@@ -1,0 +1,20 @@
+Chat (java)
+
+- salas
+- Limite de usuários por sala
+- Salas existentes deverão estar cadastradas em um banco de dados
+- Deverá existir um programa de manutenção de salas
+- Falas abertas ou fechadas
+- Beleza é fundamental
+- Certos usuários podem falar com usuários de outras salas
+- Criar uma classe chamada Usuário com Nick e dentro dela tenha um bufferedreader e um printwriter associados ao socket que o usuario usa, de forma que toda vez que eu printar vai atraves do socket para  o usuario e que toda vez que leio estou pegando o mensagem que o usuaeio mandou
+- Criar classe chamada Usuarios que represente um conjunto de usuarios.
+- Criar classe Sala, que tenha atributos Nome, Qtde Máxima, Qtde de lugares ocupados e Usuarios
+- Criar uma classe chamada Salas, que represente um conjunto de salas
+- Quando o programa é executado, ele pega do servidor as salas e as cria
+- No servidor, main fica em loop eterno, fazendo accept em um server socket pra esperar pedidos de conexão
+- Se acontecer o pedido, pegue o socket retornado e crie com ele um bufferedreader e um printwriter, ou não e passar direto o Socket e deixar a classe criar. Essa classe será um Usuario, que será uma thread.
+- Após isso, a main chamará start() e acabou o trabalho da main. Volta em loop.
+- Essa thread rodará o método run(), que pegará o bufferedreader e ler qual o nick e as informações que o usuario pretende usar. Mandar por meio do buffered as informações da sala. LEr também qual sala o usuario vai entrar. Run() poderá setar a informação nick. Em seguida, o Run() fica em loop fazendo leitura do bufferedreader pra checar se o usuario que ele controla ta mandando alguma coisa. Se mandou, tem que ler e tem que enviar ao destino correto (procura na sala pra quem vai a msg e acha o printwriter e printa a msg. Se for publica, faz um for e vai printando pra todo mundo).
+
+Data de Entrega 09/11
